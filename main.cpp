@@ -26,17 +26,17 @@ void init()
 int main(int argc,char* argv[])
 {
     init();
-	fstream file1;
-	file1.open(argv[1]);
+	/*fstream file1;
+	file1.open(argv[1]);*/
 	string s="";
-	file1>>noskipws;
+	/*file1>>noskipws;
 	char ch;
 	while(file1.peek()!=EOF)
     {
         ch=file1.get();
         s+=ch;
-    }
-    //cin >> s;
+    }*/
+    cin >> s;
     s+='#';
     string st;
     int i;
@@ -114,6 +114,6 @@ int main(int argc,char* argv[])
             }
         }
     }
-    file1.close();
+    //file1.close();
     return 0;
 }
