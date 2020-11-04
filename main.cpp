@@ -44,25 +44,35 @@ int main(int argc,char* argv[])
     {
         if(i==0)
         {
-            st+=s[0];
+            if(s[0]!='+'&&s[0]!='*'&&s[0]!='('&&s[0]!=')'&&s[0]!='i') 
+            {
+            	cout << "E";
+                break;
+			}
+			st+=s[0];
             cout << "I" << s[0];
             i++;
         }
         else
         {
             cout << endl;
+			if(s[i]!='+'&&s[i]!='*'&&s[i]!='('&&s[i]!=')'&&s[i]!='i'&&i!=s.length()-1) 
+            {
+           		cout << "E";
+               	break;
+			}
             int k;
             for(k=st.length()-1;k>=0&&st[k]=='N';k--)
                 ;
             if(k<0)
             {
-                st+=s[i];
+				st+=s[i];
                 cout << "I" << s[i];
                 i++;
             }
             else if(a[mp[st[k]]][mp[s[i]]]==1||a[mp[st[k]]][mp[s[i]]]==2)
             {
-                st+=s[i];
+				st+=s[i];
                 cout << "I" << s[i];
                 i++;
             }
